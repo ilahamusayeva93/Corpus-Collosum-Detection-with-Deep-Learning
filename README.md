@@ -65,3 +65,65 @@ The **CC-ABIDE (Corpus Callosum in Autism Brain Imaging Data Exchange)** dataset
 ### Conclusion
 
 By leveraging these diverse brain MRI datasets, the project aims to develop an effective pipeline for corpus callosum detection, contributing to advancements in neuroimaging and autism research. Researchers and practitioners can utilize the provided resources to access and explore these valuable datasets.
+
+
+
+
+
+
+### For Second Part of the Code
+#### Datasets Preprocessing
+The provided code processes raw images from two datasets, "abide_dataset" and "oasis_dataset." It converts tiff images to numpy arrays, resizes them to a specified dimension (128x128), and creates corresponding full and segmented image arrays. The processed datasets are then saved as "all.pkl" for further use.
+
+#### Train-Validation-Test Split
+The dataset is split into training, validation, and test sets. The training set constitutes 70% of the data, the validation set 10%, and the test set 20%. The resulting splits are saved as "train-and-val.pkl" and "test.pkl," respectively.
+
+#### Data Augmentation
+A data augmentation step involves translation and rotation of images to enhance the dataset. Translation is applied in both x and y directions, and rotation is performed at various angles. The augmented dataset is saved for training.
+
+#### Preprocessing and Normalization
+Prior to training, the mean and standard deviation of pixel values across all full images are calculated. The full images in all sets (train, validation, and test) are then normalized using these statistics.
+
+#### Model Architecture
+The deep learning model is a convolutional neural network (CNN) for image segmentation. It consists of multiple convolutional and pooling layers, followed by upsampling and concatenation layers. The model employs dropout and batch normalization for regularization.
+
+#### Loss Function and Training
+The model uses a custom dice coefficient loss function for training. It is trained for 1000 epochs with a batch size of 32 and an Adam optimizer. Model checkpoints and CSV logging are utilized during training.
+
+#### Evaluation and Results
+The model's performance is evaluated using the test set, and the results are visualized. The test accuracy and additional metrics are reported, and a grid of original images, ground truth, and predicted results is plotted for qualitative assessment.
+
+### File Structure
+- `abide_dataset/` and `oasis_dataset/`: Raw image datasets
+- `all.pkl`: Processed dataset
+- `train-and-val.pkl`: Train and validation sets
+- `test.pkl`: Test set
+- `train-augmented-{index}.pkl`: Augmented training sets
+- `saved_model_filename`: Model checkpoints
+- `csv_logger_training`: CSV log file
+- `result_imgs_folder`: Folder for saving result images
+
+### Execution
+1. Run the dataset preprocessing code.
+2. Execute the train-validation-test split and save datasets.
+3. Perform data augmentation and save augmented training sets.
+4. Normalize datasets using the mean and standard deviation.
+5. Set up the model architecture and training parameters.
+6. Train the model and save checkpoints.
+7. Evaluate the model on the test set and visualize results.
+
+Note: Adjust file paths as needed for your environment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
