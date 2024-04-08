@@ -114,6 +114,10 @@ The model's performance is evaluated using the test set, and the results are vis
 
 Note: Adjust file paths as needed for your environment.
 
+Reference:
+Heinsfeld AS, Franco AR, Craddock RC, Buchweitz A, Meneguzzi F. Identification of autism spectrum disorder using deep learning and the ABIDE dataset. Neuroimage Clin. 2017 Aug 30;17:16-23. doi: 10.1016/j.nicl.2017.08.017. PMID: 29034163; PMCID: PMC5635344.
+
+Sólon, Anibal & Franco, Alexandre & Craddock, Cameron & Buchweitz, Augusto & Meneguzzi, Felipe. (2017). Identification of autism spectrum disorder using deep learning and the ABIDE dataset. NeuroImage: Clinical. 17. 10.1016/j.nicl.2017.08.017. 
 
 
 
